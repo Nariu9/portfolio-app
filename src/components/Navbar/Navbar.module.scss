@@ -1,0 +1,98 @@
+.navbar {
+  padding: 30px 100px;
+  background-color: #2d2e32;
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 100%;
+
+    .logo {
+      display: flex;
+      font-size: 30px;
+
+      .logoSpan {
+        font-weight: 700;
+        margin-right: 10px;
+      }
+    }
+
+    .list {
+      list-style-type: none;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .links {
+        margin-right: 25px;
+        font-size: 16px;
+        cursor: pointer;
+
+        &:hover { /*???*/
+          color: #64f4ac;
+        }
+
+        > a {
+          text-decoration: none;
+
+          &:hover {
+            color: #64f4ac;
+          }
+        }
+      }
+    }
+
+    .menuIcons {
+      filter: invert(1);
+      display: none;
+      position: absolute;
+      top: 45px;
+      right: 20px;
+
+      &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+
+      .menuIcon {
+        width: 20px;
+      }
+    }
+
+    .socials {
+      display: flex;
+      justify-content: space-between;
+
+      .linkedIn,
+      .telegram {
+        display: flex;
+        align-items: center;
+        margin-left: 50px;
+        cursor: pointer;
+
+        img {
+          filter: invert(1);
+          width: 20px;
+          margin-right: 10px;
+        }
+      }
+
+      .email {
+        padding: 15px;
+        border-radius: 50%;
+        background-color: #333438;
+        width: 55px;
+        margin-left: 50px;
+        cursor: pointer;
+        transition: 0.1s ease;
+
+        &:hover {
+          background-color: #27282b;
+        }
+      }
+    }
+  }
+}
