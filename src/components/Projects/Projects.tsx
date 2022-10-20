@@ -6,9 +6,9 @@ import socialNetwork from '../../images/social.webp'
 
 export const Projects = () => {
     return (
-        <div className={classes.projects}>
+        <div className={classes.projects} id="projects">
             <div className={classes.container}>
-                <div className={classes.left}>
+                <div className={classes.left} data-aos="fade-right">
                     <p className={classes.title}>My latest works</p>
                     <p className={classes.subtitle}>Perfect solutions for digital experience
                     </p>
@@ -17,7 +17,7 @@ export const Projects = () => {
                     <p className={classes.extra}>Some projects not allowed to publish by NDA, if you want to see
                         more, <a href="#contacts">contact me</a></p>
                 </div>
-                <div className={classes.right}>
+                <div className={classes.right} data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="500">
                     <img src={todo} alt="todoList" className={classes.projectImg}/>
                     <img src={socialNetwork} alt="socialNetwork" className={classes.projectImg}/>
                 </div>
