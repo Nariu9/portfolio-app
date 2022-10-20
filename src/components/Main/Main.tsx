@@ -7,9 +7,9 @@ import typescript from '../../images/ts.svg'
 
 export const Main = () => {
     return (
-        <div className={classes.main}>
+        <div className={classes.main} id="main">
             <div className={classes.container}>
-                <div className={classes.left}>
+                <div className={classes.left} data-aos="fade-right" data-aos-delay="500">
                     <p className={classes.subtitle}>Front-End Developer</p>
                     <div className={classes.title}>
                         <p>Talk is cheap.</p>
@@ -22,7 +22,7 @@ export const Main = () => {
                     </div>
                     <a href="#contacts">let's chat!</a>
                 </div>
-                <div className={classes.right}>
+                <div className={classes.right} data-aos="fade-left" data-aos-delay="1000">
                     <img src={hero} alt="hero" className={classes.hero}/>
                     <div className={classes.circle + ' ' + classes.react}>
                         <img src={react} alt="react"/>
@@ -34,7 +34,7 @@ export const Main = () => {
                         <img src={typescript} alt="typescript"/>
                     </div>
                 </div>
-                <div className={classes.info}>
+                <div className={classes.info} data-aos="fade-up" data-aos-delay="1500">
                     <p className={classes.number}>4</p>
                     <p className={classes.description}>years experience</p>
                     <p className={classes.number}>14</p>
