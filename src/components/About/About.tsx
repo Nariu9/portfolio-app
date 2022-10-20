@@ -7,10 +7,10 @@ import ts from '../../images/ts.svg'
 
 export const About = () => {
     return (
-        <div className={classes.about}>
+        <div className={classes.about} id='about'>
             <div className={classes.left}>
                 <div className={classes.cards}>
-                    <div className={classes.card}>
+                    <div className={classes.card} data-aos="fade-right" data-aos-duration="1000">
                         <div className={classes.cardTop}>
                             <p className={classes.cardTitle}>Design</p>
                             <img src={react} alt="react" className={classes.cardIcon}/>
@@ -19,7 +19,7 @@ export const About = () => {
                             elit.</p>
                         <p className={classes.cardLink}>20 projects</p>
                     </div>
-                    <div className={classes.card}>
+                    <div className={classes.card} data-aos="fade-right" data-aos-duration="1000">
                         <div className={classes.cardTop}>
                             <p className={classes.cardTitle}>Front-end</p>
                             <img src={redux} alt="redux" className={classes.cardIcon}/>
@@ -28,7 +28,7 @@ export const About = () => {
                             elit.</p>
                         <p className={classes.cardLink}>53 projects</p>
                     </div>
-                    <div className={classes.card}>
+                    <div className={classes.card} data-aos="fade-right" data-aos-duration="1000">
                         <div className={classes.cardTop}>
                             <p className={classes.cardTitle}>SEO</p>
                             <img src={ts} alt="ts" className={classes.cardIcon}/>
