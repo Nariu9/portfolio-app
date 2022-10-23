@@ -1,123 +1,141 @@
+@import "../../common/styles/sass/variables.module";
+@import "../../common/styles/sass/mixins.module";
+
 .main {
-  position: relative;
-  overflow: hidden;
   background-color: #2d2e32;
-  height: calc(100vh - 110px);
-  width: 100%;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .mainTitle {
+    text-align: center;
+    margin-top: 80px;
+    font-size: 50px;
+    @media screen and (max-width: 1600px) {
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 1487px) {
+      font-size: 45px;
+    }
+    @media screen and (max-width: 1428px) {
+      margin-top: 80px;
+    }
+    @media screen and (max-width: 1366px) {
+      margin-top: 20px;
+    }
+    @media screen and (max-width: 1232px) {
+      font-size: 40px;
+      margin-top: 10px;
+    }
+
+  }
 
   .container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    max-width: 1440px;
-    padding-top: 120px;
-    @media screen and (max-width: 1024px) {
-      padding-left: 20px;
-      padding-top: 100px;
-    }
-    @media screen and (max-width: 768px) {
-      display: unset;
-    }
+    align-items: flex-end;
+    @include container();
 
     .left {
-      margin-top: -300px;
+      width: 65%;
       display: flex;
-      flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
-      @media screen and (max-width: 1024px) {
-        margin-top: -130px;
+      flex-direction: column;
+      margin-bottom: 250px;
+      @media screen and (max-width: 1763px){
+        width: 75%;
       }
-      @media screen and (max-width: 768px) {
-        position: relative;
-        padding: 40px;
-        text-align: center;
-        margin-top: 0;
-        align-items: center;
-        z-index: 10;
+      @media screen and (max-width: 1721px){
+        width: 80%;
       }
+      @media screen and (max-width: 1332px){
+        margin-bottom: 200px;
+        width: 90%;
+      }
+
 
       .subtitle {
         padding: 10px 20px;
         color: #000;
         font-weight: 600;
-        border-right: 5px;
-        background-color: #dda7d3;
+        background-color: #ee6192;
+        border-radius: 18px;
       }
 
       .title {
-        font-size: 50px;
-        display: flex;
-        flex-direction: column;
+        font-size: 40px;
         padding: 30px 0;
-        @media screen and (max-width: 768px) {
-          font-size: 40px;
+        @media screen and (max-width: 1589px){
+          font-size: 35px;
+        }
+        @media screen and (max-width: 1487px) {
+          font-size: 32px;
+        }
+        @media screen and (max-width: 1232px) {
+          font-size: 27px;
         }
       }
 
       .info {
+        color: #9797a1;
+      }
+
+      .links {
+        margin-top: 30px;
         display: flex;
-        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
 
-        > p {
-          color: #9797a1;
+        a {
+          text-decoration: none;
+          letter-spacing: 1px;
+          font-size: 25px;
+          color: #ee6192;
+          text-transform: uppercase;
+          background: none;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid #ee6192;
+          @media screen and (max-width: 1487px) {
+            font-size: 20px;
+          }
+
+          &:hover {
+            color: #fff;
+            border-bottom: 2px solid #fff;
+          }
         }
       }
 
-      a {
-        text-decoration: none;
-        letter-spacing: 1px;
-        margin-top: 70px;
-        font-size: 25px;
-        color: #64f4ac;
-        text-transform: uppercase;
-        background: none;
-        outline: none;
-        border: none;
-        border-bottom: 2px solid #64f4ac;
 
-        &:hover {
-          color: #fff;
-          border-bottom: 2px solid #fff;
-        }
-      }
     }
 
     .right {
-      width: 600px;
-      @media screen and (max-width: 1024px) {
-        width: 500px;
-      }
-      @media screen and (max-width: 768px) {
-        margin-left: auto;
-        margin-right: auto;
-        opacity: 0.5;
-      }
-      @media screen and (min-width: 360px) and (max-width: 460px) {
-        width: 330px;
-        position: absolute;
-        bottom: -10px;
-        left: 40px;
-        opacity: 0.3;
-      }
-      @media screen and (max-width: 360px) {
-        margin: -300px auto;
-        width: 260px;
-        bottom: -140px;
-      }
+      position: relative;
 
       .hero {
-        margin-top: 10px;
-        width: 100%;
+        width: 647px;
+        height: 775px;
         position: relative;
         z-index: 3;
+        background-image: url("../../images/hero.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        @media screen and (max-width: 1428px) {
+          align-self: flex-end;
+          width: 545px;
+          height: 650px;
+        }
       }
 
       &:after {
         content: '';
         position: absolute;
-        top: 40%;
-        left: 40%;
+        top: 45%;
+        left: 51%;
         transform: translate(-50%, -50%);
         background: linear-gradient(
                         135deg,
@@ -127,38 +145,25 @@
                         #2b2c30 80%,
                         #2b2c2e 100%);
         border-radius: 50%;
-        height: 500px;
-        width: 500px;
+        height: 600px;
+        width: 600px;
         z-index: 0;
-        @media screen and (max-width: 1024px) {
-          top: 50%;
-          left: 50%;
-        }
-        @media screen and (max-width: 768px) {
-          position: unset;
+        @media screen and (max-width: 1428px) {
+          height: 480px;
+          width: 480px;
         }
       }
 
       &:before {
         content: '';
         position: absolute;
-        bottom: 55%;
+        bottom: 40%;
         right: 0;
-        background: #63f2aa;
+        background: #ee6192;
         border-radius: 50%;
-        height: 8px;
-        width: 8px;
+        height: 10px;
+        width: 10px;
         z-index: 2;
-        @media screen and (max-width: 1024px) {
-          bottom: 65%;
-          right: 5%;
-          z-index: 5;
-        }
-        @media screen and (max-width: 768px) {
-          bottom: 40%;
-          right: -10%;
-          z-index: 4;
-        }
       }
 
       .circle {
@@ -174,11 +179,17 @@
 
       .react {
         position: absolute;
-        width: 120px;
-        height: 120px;
-        bottom: 300px;
-        left: 0;
+        width: 140px;
+        height: 140px;
+        bottom: 375px;
+        left: 45px;
         z-index: 4;
+        @media screen and (max-width: 1428px) {
+          height: 125px;
+          width: 125px;
+          bottom: 300px;
+          left: 40px;
+        }
         @media screen and (max-width: 1024px) {
           width: 100px;
           height: 100px;
@@ -193,7 +204,7 @@
         }
 
         > img {
-          width: 60px;
+          width: 75px;
           animation: spin 5s linear infinite;
           @keyframes spin {
             0% {
@@ -211,10 +222,17 @@
 
       .redux {
         position: absolute;
-        width: 150px;
-        height: 150px;
-        bottom: 100px;
+        width: 130px;
+        height: 130px;
+        bottom: 115px;
+        left: 485px;
         z-index: 4;
+        @media screen and (max-width: 1428px){
+          width: 120px;
+          height: 120px;
+          bottom: 106px;
+          left: 395px;
+        }
         @media screen and (max-width: 1024px) {
           width: 130px;
           height: 130px;
@@ -232,7 +250,7 @@
         }
 
         > img {
-          width: 70px;
+          width: 65px;
           @media screen and (max-width: 768px) {
             width: 40px;
           }
@@ -241,11 +259,17 @@
 
       .typescript {
         position: absolute;
-        width: 100px;
-        height: 100px;
-        top: 150px;
-        right: 30px;
+        width: 115px;
+        height: 115px;
+        top: 260px;
+        right: 25px;
         z-index: 2;
+        @media screen and (max-width: 1428px){
+          width: 105px;
+          height: 105px;
+          top: 185px;
+          right: 35px;
+        }
         @media screen and (max-width: 1024px) {
           width: 70px;
           height: 70px;
@@ -267,7 +291,7 @@
         }
 
         > img {
-          width: 50px;
+          width: 55px;
           @media screen and (max-width: 1024px) {
             width: 40px;
           }
@@ -279,48 +303,7 @@
           }
         }
       }
-    }
 
-    .info {
-      width: 60%;
-      display: flex;
-      position: absolute;
-      align-items: center;
-      bottom: 50px;
-      left: 0;
-      @media screen and (max-width: 1024px) {
-        width: 50%;
-        bottom: 70px;
-      }
-      @media screen and (max-width: 768px) {
-        width: 70%;
-        left: 20%;
-      }
-      @media screen and (min-width: 360px) and (max-width: 460px) {
-        display: none;
-      }
-
-      .number {
-        font-size: 70px;
-        margin-left: 50px;
-        @media screen and (max-width: 1024px) {
-          font-size: 45px;
-          margin-left: 30px;
-        }
-      }
-
-      .description {
-        font-size: 23px;
-        line-height: 30px;
-        color: #9797a1;
-        margin-left: 30px;
-        text-transform: uppercase;
-        @media screen and (max-width: 1024px) {
-          font-size: 16px;
-          line-height: 20px;
-          margin-left: 10px;
-        }
-      }
     }
   }
 }
