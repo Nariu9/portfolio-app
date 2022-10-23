@@ -15,9 +15,7 @@ export const Nav: React.FC<NavType> = ({activeLink, setActiveLink}) => {
     return (
         <nav className={classes.nav}>
             <a href="#main" onClick={activeHandler('#main')}
-               className={activeLink === '#main' ? classes.active : ''}><AiOutlineHome/></a>
-            <a href="#about" onClick={activeHandler('#about')}
-               className={activeLink === '#about' ? classes.active : ''}><AiOutlineUser/></a>
+               className={activeLink === '#main' ? classes.active : ''}><AiOutlineUser/></a>
             <a href="#skills" onClick={activeHandler('#skills')}
                className={activeLink === '#skills' ? classes.active : ''}><BiBook/></a>
             <a href="#projects" onClick={activeHandler('#projects')}
