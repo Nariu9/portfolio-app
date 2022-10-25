@@ -1,0 +1,106 @@
+@import "../../common/styles/sass/variables.module";
+@import "../../common/styles/sass/mixins.module";
+
+.skills {
+  color: #fff;
+  background: #25262a;
+  height: 100vh;
+  @media screen and (max-width: 912px){
+    height: unset;
+  }
+
+  .container {
+    @include container();
+    padding: 60px 0;
+    @media screen and (max-width: 1600px) {
+      padding: 50px 0;
+      @media (max-width: 1366px) {
+        padding: 30px 0;
+      }
+      @media (max-width: 1147px) {
+        width: 90%;
+      }
+    }
+
+    & h2 {
+      text-align: center;
+      font-weight: 400;
+      font-size: 40px;
+      margin-bottom: 40px;
+      @media (max-width: 1394px) {
+        font-size: 35px;
+      }
+      @media (max-width: 1280px) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: 1024px) {
+        margin-bottom: 20px;
+        font-size: 30px;
+      }
+      @media (max-width: 375px) {
+        font-size: 25px;
+      }
+    }
+
+    .subtitle {
+      max-width: 600px;
+      margin-bottom: 40px;
+      color: #9797a1;
+      font-size: 18px;
+      line-height: 30px;
+      @media (max-width: 1280px) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 1024px) {
+        font-size: 16px;
+      }
+    }
+
+    .cards {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 4rem;
+      flex-wrap: wrap;
+      @media screen and (max-width: 1600px) {
+        gap: 3rem;
+        @media (max-width: 1024px) {
+          gap: 2rem;
+        }
+        @media (max-width: 912px){
+          justify-content: space-around;
+        }
+        @media (max-width: 635px){
+          gap: 1rem;
+        }
+
+      }
+
+      > div {
+        &:hover {
+          .cardIcon {
+            transform: rotate(360deg);
+          }
+        }
+
+      }
+
+      .cardIcon {
+        font-size: 40px;
+        color: #ee6192;
+        transition: transform 2s ease-in-out;
+        @media screen and (max-width: 1394px) {
+          font-size: 35px;
+        }
+        @media  (max-width: 1024px){
+          font-size: 30px;
+        }
+      }
+    }
+
+    .cardDescription {
+      color: #9797a1;
+      padding: 20px 0;
+    }
+  }
+}
