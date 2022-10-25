@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Nav.module.scss';
-import {AiOutlineHome, AiOutlineUser} from 'react-icons/ai';
+import {AiOutlineUser} from 'react-icons/ai';
 import {BiBook, BiBriefcase, BiMessageDetail} from 'react-icons/bi';
 
 type NavType = {
