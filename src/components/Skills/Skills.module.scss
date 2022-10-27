@@ -5,13 +5,17 @@
   color: #fff;
   background: #25262a;
   height: 100vh;
-  @media screen and (max-width: 912px){
+  @media screen and (max-width: 1312px) {
     height: unset;
   }
 
   .container {
     @include container();
     padding: 60px 0;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     @media screen and (max-width: 1600px) {
       padding: 50px 0;
       @media (max-width: 1366px) {
@@ -22,37 +26,17 @@
       }
     }
 
-    & h2 {
-      text-align: center;
-      font-weight: 400;
-      font-size: 40px;
-      margin-bottom: 40px;
-      @media (max-width: 1394px) {
-        font-size: 35px;
-      }
-      @media (max-width: 1280px) {
-        margin-bottom: 30px;
-      }
-      @media (max-width: 1024px) {
-        margin-bottom: 20px;
-        font-size: 30px;
-      }
-      @media (max-width: 375px) {
-        font-size: 25px;
-      }
-    }
-
     .subtitle {
       max-width: 600px;
       margin-bottom: 40px;
       color: #9797a1;
       font-size: 18px;
       line-height: 30px;
-      @media (max-width: 1280px) {
+      @media screen and (max-width: 1280px) {
         margin-bottom: 20px;
-      }
-      @media (max-width: 1024px) {
-        font-size: 16px;
+        @media (max-width: 1024px) {
+          font-size: 16px;
+        }
       }
     }
 
@@ -67,10 +51,10 @@
         @media (max-width: 1024px) {
           gap: 2rem;
         }
-        @media (max-width: 912px){
+        @media (max-width: 912px) {
           justify-content: space-around;
         }
-        @media (max-width: 635px){
+        @media (max-width: 635px) {
           gap: 1rem;
         }
 
@@ -92,7 +76,7 @@
         @media screen and (max-width: 1394px) {
           font-size: 35px;
         }
-        @media  (max-width: 1024px){
+        @media (max-width: 1024px) {
           font-size: 30px;
         }
       }
