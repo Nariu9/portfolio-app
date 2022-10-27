@@ -1,147 +1,92 @@
+@import "../../common/styles/sass/variables.module";
+@import "../../common/styles/sass/mixins.module";
+
 .projects {
-  width: 100%;
-  padding: 50px 0;
-  background-color: #25262a;
+  color: #fff;
+  background-color: #2d2e32;
+  height: 100vh;
+  @media screen and (max-width: 1312px) {
+    height: unset;
+  }
 
   .container {
-    width: 80%;
-    margin: auto;
+    @include container();
+    padding: 60px 0;
+    height: 100%;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    @media screen and (max-width: 768px) {
-      width: 100%;
-      padding: 50px 0 50px 50px;
-    }
-    @media screen and (max-width: 460px) {
-      flex-direction: column;
-      padding: 50px 0;
+    justify-content: space-between;
+    flex-direction: column;
+    @media screen and (max-width: 1366px) {
+      padding: 30px 0;
     }
 
-    .left {
-      width: 50%;
-      @media screen and (max-width: 460px) {
-        width: 100%;
-        padding-bottom: 70px;
-        text-align: center;
-      }
 
-      .title {
-        font-size: 35px;
-        padding-left: 70px;
-        @media screen and (max-width: 1024px) {
-          padding-left: 0;
+    .subtitle {
+      max-width: 600px;
+      margin-bottom: 40px;
+      color: #9797a1;
+      font-size: 18px;
+      line-height: 30px;
+      @media screen and (max-width: 1366px) {
+        margin-bottom: 25px;
+        @media (max-width: 1280px) {
+          margin-bottom: 20px;
+        }
+        @media (max-width: 1024px) {
+          font-size: 16px;
         }
       }
+    }
 
-      .subtitle {
-        color: #9797a1;
-        padding: 20px 0 100px 70px;
-        @media screen and (max-width: 1024px) {
-          padding: 20px 0 50px 0;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 60px;
+      @media screen and (max-width: 1366px) {
+        margin-bottom: 25px;
+        @media screen and (max-width: 1312px) {
+          justify-content: space-around;
+          gap: 2rem;
+          margin-bottom: 35px
         }
       }
+    }
 
-      .button {
-        letter-spacing: 1px;
-        margin: 70px 0 100px 70px;
-        font-size: 25px;
-        color: #64f4ae;
-        background: none;
-        text-transform: uppercase;
-        outline: none;
-        border: none;
-        border-bottom: 2px solid #64f4ae;
-        cursor: pointer;
-        @media screen and (max-width: 1024px) {
-          margin: 0 0 50px 70px;
-        }
-        @media screen and (max-width: 460px) {
-          margin: 0 0 50px 0;
-        }
-
-        &:hover {
-          color: #fff;
-          border-bottom: 2px solid #fff;
+    .info {
+      max-width: 550px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      @media screen and (max-width: 1024px) {
+        max-width: 500px;
+        @media (max-width: 603px) {
+          align-items: center;
         }
       }
 
       .extra {
         color: #9797a1;
-        padding: 0 150px 0 70px;
+        font-size: 18px;
+        line-height: 30px;
         @media screen and (max-width: 1024px) {
-          padding: 0 50px 0 70px;
+          font-size: 16px;
         }
+      }
 
-        > a {
-          text-decoration: none;
-          color: #64f4ae;
-          background: none;
-          border-bottom: 2px solid #64f4ae;
-          cursor: pointer;
+      a {
+        color: #fff;
+        font-size: 28px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 5px;
+        transition: ease-out 0.3s;
 
-          &:hover {
-            color: #fff;
-            border-bottom: 2px solid #fff;
-          }
+        &:hover {
+          color: #ee6192;
         }
       }
     }
-
-    .right {
-      width: 50%;
-      @media screen and (max-width: 460px) {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
-}
-
-.projectImg {
-  width: 400px;
-  height: 400px;
-  margin-bottom: 50px;
-  border-radius: 10px;
-  filter: drop-shadow(10px 0 20px #000);
-  @media screen and (max-width: 1024px) {
-    width: 340px;
-    height: 340px;
-  }
-  @media screen and (max-width: 768px) {
-    width: 300px;
-    height: 300px;
-  }
-  @media screen and (max-width: 360px) {
-    width: 280px;
-    height: 280px;
-  }
-
-  &:hover {
-    animation: shake 0.3s;
-  }
-}
-
-@keyframes shake {
-  0% {
-    transform: translate(1px, 1px) rotate(0deg);
-  }
-  20% {
-    transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    transform: translate(1px, -1px) rotate(1deg);
-  }
-  40% {
-    transform: translate(-3px, 1px) rotate(0deg);
-  }
-  60% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  80% {
-    transform: translate(-1px, -1px) rotate(1deg);
-  }
-  100% {
-    transform: translate(1px, -2px) rotate(-1deg);
   }
 }
