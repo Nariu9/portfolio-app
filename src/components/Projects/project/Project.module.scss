@@ -1,16 +1,25 @@
 .project {
   background-color: #25262a;
-  width: 350px;
+  width: 400px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
   filter: drop-shadow(10px 0 20px #000);
   border-radius: 10px;
+  @media screen and (max-width: 1600px) {
+    width: 350px;
+    @media (max-width: 1366px) {
+      filter: drop-shadow(10px 0 10px #000);
+    }
+    @media (max-width: 1024px) {
+      width: 310px;
+    }
+  }
 
 
   .imageBlock {
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -20,6 +29,14 @@
     justify-content: center;
     border-radius: 10px 10px 0 0;
     position: relative;
+    @media screen and (max-width: 1600px) {
+      width: 350px;
+      height: 350px;
+      @media (max-width: 1024px) {
+        width: 310px;
+        height: 310px;
+      }
+    }
 
     &:before {
       position: absolute;
@@ -30,7 +47,7 @@
       bottom: 0;
       left: 0;
       right: 0;
-      opacity: 0.6;
+      opacity: 0.5;
       z-index: 0;
     }
 
@@ -44,8 +61,11 @@
       border-bottom: 2px solid #fff;
       z-index: 1;
       transition: ease-out 0.3s;
-      @media screen and (max-width: 375px) {
-        font-size: 18px;
+      @media screen and (max-width: 1024px) {
+        display: inline-block;
+        @media (max-width: 375px) {
+          font-size: 18px;
+        }
       }
 
       &:hover {
@@ -57,17 +77,18 @@
 
   &:hover {
     animation: shake 0.3s;
-     a {
-       animation: fadeIn 1s;
-       display: inline-block;
-     }
+
+    a {
+      animation: fadeIn 1s;
+      display: inline-block;
+      @media screen and (max-width: 1024px) {
+        animation: none;
+      }
+    }
   }
 
   .descriptionBlock {
     padding: 25px;
-    @media screen and (max-width: 480px){
-      padding: 10px;
-    }
 
     .projectTitle {
       font-size: 18px;
@@ -78,7 +99,6 @@
     }
 
     .description {
-      //font-size: 16px;
       color: #9797a1;
       line-height: 1.2;
     }
@@ -111,6 +131,10 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
