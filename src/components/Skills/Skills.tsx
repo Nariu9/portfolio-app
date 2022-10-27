@@ -6,13 +6,14 @@ import {SiDatabricks, SiJest, SiMaterialui, SiPostman, SiRedux, SiStorybook, SiT
 import {Skill} from './Skill/Skill';
 import {TbLetterA} from 'react-icons/tb';
 import {GiFishingHook} from 'react-icons/gi';
+import {Title} from '../../common/components/Title/Title';
 
 
 export const Skills = () => {
     return (
         <div className={classes.skills} id="skills">
             <div className={classes.container}>
-                <h2>My Tech Stack</h2>
+                <Title title={'My Tech Stack'}/>
                 <p className={classes.subtitle}>My work gives me the opportunity to get acquainted with various
                     development tools. I appreciate it and am always happy to try something new. Here are some of them
                     that I have the most experience with:</p>
