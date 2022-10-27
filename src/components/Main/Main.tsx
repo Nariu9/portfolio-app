@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './Main.module.scss';
-import react from '../../images/react.svg'
-import redux from '../../images/redux.svg'
-import typescript from '../../images/ts.svg'
+import react from '../../assets/icons/react.svg'
+import redux from '../../assets/icons/redux.svg'
+import typescript from '../../assets/icons/ts.svg'
+import CV from '../../assets/docs/CV.pdf'
 import {Fade} from 'react-awesome-reveal';
-import CV from '../../images/CV.pdf'
 
 export const Main = () => {
     return (
@@ -42,13 +42,6 @@ export const Main = () => {
                         </div>
                     </div>
                 </Fade>
-                {/*<div className={classes.info} data-aos="fade-up" data-aos-delay="1500">*/}
-                {/*  <div className={classes.info}>
-                    <p className={classes.number}>4</p>
-                    <p className={classes.description}>years experience</p>
-                    <p className={classes.number}>14</p>
-                    <p className={classes.description}>projects completed in different countries</p>
-                </div>*/}
             </div>
         </div>
     );
