@@ -1,29 +1,27 @@
-import React, {useEffect} from 'react';
+import React, {useState} from 'react';
 import './App.scss';
-import {Navbar} from './components/Navbar/Navbar';
+import 'react-toastify/dist/ReactToastify.css';
 import {Main} from './components/Main/Main';
-import {About} from './components/About/About';
 import {Footer} from './components/Footer/Footer';
 import {Projects} from './components/Projects/Projects';
 import {Contacts} from './components/Contacts/Contacts';
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import {Nav} from './components/Nav/Nav';
+import {Skills} from './components/Skills/Skills';
+import {ToastContainer} from 'react-toastify';
 
 function App() {
 
-    useEffect(()=>{
-        AOS.init()
-        AOS.refresh()
-    })
+    const [activeLink, setActiveLink] = useState('')
 
     return (
-        <div className="App">
-            <Navbar/>
+        <div onWheel={() => setActiveLink('')}>
+            <Nav activeLink={activeLink} setActiveLink={setActiveLink}/>
             <Main/>
-            <About/>
+            <Skills/>
             <Projects/>
             <Contacts/>
             <Footer/>
+            <ToastContainer/>
         </div>
     );
 }
