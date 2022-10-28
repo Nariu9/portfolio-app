@@ -1,0 +1,108 @@
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: 0;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+  background: -webkit-linear-gradient(top,  rgba(255,255,255,0) 0%,rgba(0,174,255,0.04) 50%,rgba(255,255,255,0) 51%,rgba(0,174,255,0.03) 100%);
+}
+
+.contactsBlock {
+  background-color: #25262a;
+  color: #fff;
+  padding: 100px 0;
+  min-height: 50vh;
+
+  .contactsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin: 0 auto;
+    & p {
+      font-size: 32px;
+      letter-spacing: 1px;
+    }
+
+    .contactsForm {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 360px;
+      width: 540px;
+      @media screen and (max-width: 694px) {
+        width: 95%;
+      }
+
+      .error {
+        font-size: 16px;
+        align-self: flex-start;
+        height: 25px;
+        margin: 8px 0 0 10px;
+      }
+
+      input {
+        height: 15%;
+        width: 100%;
+        font-size: 16px;
+        border: 2px solid rgba(255, 255, 255, .15);
+        border-radius: 10px;
+        padding: 10px 25px 10px 12px;
+        min-width: 100%;
+        outline: none;
+        color: #fff;
+        background-color: transparent;
+        margin-top: 10px;
+      }
+
+      textarea {
+        height: 40%;
+        width: 100%;
+        font-size: 16px;
+        border: 2px solid rgba(255, 255, 255, .15);
+        border-radius: 10px;
+        padding: 10px 25px 10px 12px;
+        min-width: 100%;
+        outline: none;
+        color: #fff;
+        background-color: transparent;
+        resize: none;
+        font-family: 'Montserrat', sans-serif;
+        margin-top: 10px;
+      }
+    }
+
+    input:focus,
+    textarea:focus {
+      border: 2px solid #9797a1;
+    }
+
+    .sendBtn {
+      letter-spacing: 1px;
+      font-size: 25px;
+      color: #ee6192;
+      text-transform: uppercase;
+      background: none;
+      outline: none;
+      border: none;
+      border-bottom: 2px solid #ee6192;
+      cursor: pointer;
+      margin-top: 10px;
+
+      &:hover {
+        color: #fff;
+        border-bottom: 2px solid #fff;
+      }
+    }
+  }
+}
