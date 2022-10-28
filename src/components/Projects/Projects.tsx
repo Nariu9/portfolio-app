@@ -6,7 +6,7 @@ import socialNetwork from '../../assets/images/SocialNetwork.png'
 import {Zoom} from 'react-awesome-reveal';
 import {Project} from './project/Project';
 import {Title} from '../../common/components/Title/Title';
-import {HiOutlineEnvelope} from 'react-icons/hi2';
+import {FaRegEnvelope} from 'react-icons/fa';
 
 export const Projects = () => {
 
@@ -62,7 +62,7 @@ export const Projects = () => {
                 <div className={classes.info}>
                     <p className={classes.extra}>If you want to see more, feel free to contact me any time
                     </p>
-                    <a href="mailto:a.karpukhin9@gmail.com"><HiOutlineEnvelope className={classes.email}/></a>
+                    <a href="mailto:a.karpukhin9@gmail.com"><FaRegEnvelope className={classes.email}/></a>
                 </div>
             </div>
         </div>
