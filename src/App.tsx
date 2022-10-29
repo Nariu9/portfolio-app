@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './App.scss';
 import 'react-toastify/dist/ReactToastify.css';
 import {Main} from './components/Main/Main';
@@ -9,13 +9,12 @@ import {Nav} from './components/Nav/Nav';
 import {Skills} from './components/Skills/Skills';
 import {ToastContainer} from 'react-toastify';
 
+
 function App() {
 
-    const [activeLink, setActiveLink] = useState('')
-
     return (
-        <div onWheel={() => setActiveLink('')}>
-            <Nav activeLink={activeLink} setActiveLink={setActiveLink}/>
+        <div>
+            <Nav/>
             <Main/>
             <Skills/>
             <Projects/>
