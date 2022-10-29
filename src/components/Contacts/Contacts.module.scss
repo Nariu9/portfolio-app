@@ -4,7 +4,10 @@
 .contacts {
   background: #25262a;
   color: #fff;
-  height: calc(100vh - 104px);
+  height: calc(100vh - 100px);
+  @media screen and (max-width: 1312px) {
+    height: unset;
+  }
 
   .container {
     @include container();
@@ -17,16 +20,53 @@
     .wrapper {
       display: flex;
       justify-content: space-around;
+      margin-bottom: 100px;
+      @media screen and (max-width: 1536px) {
+        margin-bottom: 75px;
+        @media (max-width: 1366px) {
+          margin-bottom: 0;
+        }
+        @media (max-width: 1312px) {
+          justify-content: space-between;
+          margin-top: 35px;
+        }
+        @media (max-width: 999px) {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 30px;
+        }
+      }
 
       .socials {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 40%;
+        @media screen and (max-width: 999px) {
+          width: 100%;
+        }
 
         .subtitle {
           font-size: 32px;
           letter-spacing: 1px;
+          @media screen and (max-width: 1440px) {
+            font-size: 30px;
+            @media (max-width: 1366px) {
+              font-size: 28px;
+            }
+            @media (max-width: 1280px) {
+              font-size: 26px;
+            }
+            @media (max-width: 1206px) {
+              font-size: 22px;
+            }
+            @media (max-width: 999px) {
+              text-align: center;
+            }
+            @media (max-width: 503px) {
+              font-size: 20px;
+            }
+          }
 
           span {
             color: #ee6192;
@@ -37,15 +77,36 @@
           width: 100%;
           display: flex;
           justify-content: flex-start;
+          margin-bottom: 145px;
+          @media screen and (max-width: 1206px) {
+            margin-bottom: 165px;
+            @media (max-width: 999px) {
+              justify-content: center;
+              margin-top: 30px;
+              margin-bottom: 50px;
+            }
+            @media (max-width: 420px) {
+              justify-content: space-between;
+            }
+          }
 
           a {
-            margin: 0 20px;
+            margin-right: 40px;
             color: #fff;
             font-size: 28px;
             display: flex;
             justify-content: center;
             align-items: center;
             transition: ease-out 0.3s;
+            @media screen and (min-width: 1010px) and (max-width: 1206px) {
+              font-size: 24px;
+            }
+            @media screen and (max-width: 999px) {
+              margin: 0 20px;
+              @media (max-width: 420px) {
+                margin: 0 10px;
+              }
+            }
 
             &:hover {
               transform: scale(1.3);
