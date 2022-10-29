@@ -8,17 +8,19 @@
   transform: translateX(-50%);
   bottom: 2rem;
   display: flex;
+  flex-direction: row;
   gap: 0.8rem;
   border-radius: 3rem;
   backdrop-filter: blur(15px);
 
-  > a {
+  a {
     background: transparent;
     padding: 0.8rem;
     border-radius: 50%;
     display: flex;
     color: #fff;
     font-size: 1.1rem;
+    transition: ease-out 0.3s;
 
     &:hover {
       background-color: rgba(0, 0, 0, 0.3);
