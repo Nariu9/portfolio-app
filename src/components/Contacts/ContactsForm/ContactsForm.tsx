@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './ContsctsForm.module.scss';
+import classes from './ContactsForm.module.scss';
 import {useFormik} from 'formik';
 import {api} from '../../../api/api';
 
@@ -39,27 +39,23 @@ export const ContactsForm = () => {
             return errors;
         },
         validateOnBlur: false,
-        validateOnChange: false,
         onSubmit: (values, {resetForm}) => {
-            // console.log(JSON.stringify(values, null, 2));
             api.sendEmail(values)
             resetForm()
         }
     });
     return (
-        <div className={classes.contactsBlock}>
-            <div className={classes.contactsContainer}>
+            <div className={classes.formContainer}>
                 <p>Get in Touch</p>
                 <form onSubmit={formik.handleSubmit} className={classes.contactsForm}>
                     <input type="text" placeholder={'Name'} {...formik.getFieldProps('name')}/>
-                    <p className={classes.error}>{formik.errors.name}</p>
+                    <p className={classes.error}>{formik.touched.name && formik.errors.name && formik.errors.name}</p>
                     <input type="text" placeholder={'E-mail'} {...formik.getFieldProps('email')}/>
-                    <p className={classes.error}>{formik.errors.email}</p>
+                    <p className={classes.error}>{formik.touched.email && formik.errors.email && formik.errors.email}</p>
                     <textarea placeholder={'Message'} {...formik.getFieldProps('message')}/>
-                    <p className={classes.error}>{formik.errors.message}</p>
+                    <p className={classes.error}>{formik.touched.message && formik.errors.message && formik.errors.message}</p>
                     <button type={'submit'} className={classes.sendBtn}>Send</button>
                 </form>
             </div>
-        </div>
     );
 };
