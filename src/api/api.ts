@@ -5,7 +5,7 @@ import {toast} from 'react-toastify';
 
 export const api = {
     sendEmail(data: Required<FormType>) {
-        return emailjs.send('service_x1g04sz', 'template_hajqy3c', data, 'D1uooWrn5oFlP4B2H')
+        emailjs.send('service_x1g04sz', 'template_hajqy3c', data, 'D1uooWrn5oFlP4B2H')
             .then((result) => {
                 toast.success('Message sent! I will contact you as soon as possible.', {
                     position: 'top-right',
@@ -15,7 +15,7 @@ export const api = {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: 'dark',
+                    theme: 'colored',
                 });
             }, (error) => {
                 toast.error('Something went wrong, please try again later.', {
@@ -26,7 +26,7 @@ export const api = {
                     pauseOnHover: true,
                     draggable: true,
                     progress: undefined,
-                    theme: 'dark',
+                    theme: 'colored',
                 });
             });
     }
