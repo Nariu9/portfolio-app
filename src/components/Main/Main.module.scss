@@ -148,6 +148,7 @@
           outline: none;
           border: none;
           border-bottom: 2px solid #ee6192;
+          transition: ease-out 0.3s;
           @media screen and (max-width: 1487px) {
             font-size: 20px;
           }
