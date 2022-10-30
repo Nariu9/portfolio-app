@@ -79,7 +79,7 @@
       }
 
       .subtitle {
-        @include text(18px, #000, unset, 600);
+        @include text(18px, #000000, unset, 600);
         padding: 10px 20px;
         background-color: $accentColor;
         border-radius: 18px;
