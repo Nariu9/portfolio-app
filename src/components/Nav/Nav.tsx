@@ -10,7 +10,7 @@ export const Nav = () => {
     return (
         <nav>
             <Scrollspy items={['main', 'skills', 'projects', 'contacts']} currentClassName={classes.active}
-                       className={classes.nav}>
+                       className={classes.nav} offset={-100}>
                 <a href="#main"><AiOutlineUser/></a>
                 <a href="#skills"><BiBook/></a>
                 <a href="#projects"><BiBriefcase/></a>
