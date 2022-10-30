@@ -4,7 +4,7 @@ import cards from '../../assets/images/Cards.png'
 import todo from '../../assets/images/TodoList.png'
 import socialNetwork from '../../assets/images/SocialNetwork.png'
 import {Zoom} from 'react-awesome-reveal';
-import {Project} from './project/Project';
+import {Project} from './Project/Project';
 import {Title} from '../../common/components/Title/Title';
 import {FaRegEnvelope} from 'react-icons/fa';
 
