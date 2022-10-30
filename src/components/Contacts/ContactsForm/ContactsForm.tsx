@@ -27,7 +27,7 @@ export const ContactsForm = () => {
             if (!values.email) {
                 errors.email = 'please enter your email';
             } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
-                errors.email = 'please enter valid email address';
+                errors.email = 'please enter valid email';
             }
 
             if (!values.message) {
@@ -50,7 +50,7 @@ export const ContactsForm = () => {
                 <form onSubmit={formik.handleSubmit} className={classes.contactsForm}>
                     <input type="text" placeholder={'Name'} {...formik.getFieldProps('name')}/>
                     <p className={classes.error}>{formik.touched.name && formik.errors.name && formik.errors.name}</p>
-                    <input type="text" placeholder={'E-mail'} {...formik.getFieldProps('email')}/>
+                    <input type="email" placeholder={'E-mail'} {...formik.getFieldProps('email')}/>
                     <p className={classes.error}>{formik.touched.email && formik.errors.email && formik.errors.email}</p>
                     <textarea placeholder={'Message'} {...formik.getFieldProps('message')}/>
                     <p className={classes.error}>{formik.touched.message && formik.errors.message && formik.errors.message}</p>
