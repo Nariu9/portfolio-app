@@ -1,0 +1,25 @@
+@mixin text($fontSize, $color, $lineHeight:unset, $fontWeight:unset) {
+  font-size: $fontSize;
+  color: $color;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+}
+
+@mixin backgroundImg() {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+@mixin container() {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@mixin flex($justifyContent, $alignItems, $direction, $wrap:nowrap ) {
+  display: flex;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
