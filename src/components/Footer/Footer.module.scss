@@ -2,7 +2,7 @@
 @import "../../common/styles/sass/mixins.module";
 
 .footer {
-  color: #fff;
+  color: $primaryTextColor;
   background-color: #2d2e32;
 
   .container {
@@ -10,20 +10,17 @@
     height: 100px;
     font-size: 20px;
     letter-spacing: 1px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    @media screen and (max-width: 999px){
+    @include flex(space-between, center, unset);
+    @media screen and (max-width: 999px) {
       font-size: 16px;
       @media (max-width: 540px) {
         justify-content: space-around;
         flex-direction: column;
-        align-items: center;
       }
     }
 
     .thanks {
-      color: #ee6192;
+      color: $accentColor;
     }
   }
 }

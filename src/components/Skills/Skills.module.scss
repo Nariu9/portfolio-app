@@ -2,8 +2,8 @@
 @import "../../common/styles/sass/mixins.module";
 
 .skills {
-  color: #fff;
-  background: #25262a;
+  color: $primaryTextColor;
+  background: $secondaryBgColor;
   height: 100vh;
   @media screen and (max-width: 1312px) {
     height: unset;
@@ -13,9 +13,7 @@
     @include container();
     padding: 60px 0;
     height: 100%;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    @include flex(space-between, unset, column);
     @media screen and (max-width: 1600px) {
       padding: 50px 0;
       @media (max-width: 1366px) {
@@ -29,9 +27,7 @@
     .subtitle {
       max-width: 600px;
       margin-bottom: 40px;
-      color: #9797a1;
-      font-size: 18px;
-      line-height: 30px;
+      @include text(18px, $secondaryTextColor, 30px);
       @media screen and (max-width: 1280px) {
         margin-bottom: 20px;
         @media (max-width: 1024px) {
@@ -41,11 +37,8 @@
     }
 
     .cards {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
+      @include flex(space-between, unset, row, wrap);
       gap: 4rem;
-      flex-wrap: wrap;
       @media screen and (max-width: 1600px) {
         gap: 3rem;
         @media (max-width: 1024px) {
@@ -70,8 +63,7 @@
       }
 
       .cardIcon {
-        font-size: 40px;
-        color: #ee6192;
+        @include text(40px, $accentColor);
         transition: transform 2s ease-in-out;
         @media screen and (max-width: 1394px) {
           font-size: 35px;
@@ -80,11 +72,6 @@
           font-size: 30px;
         }
       }
-    }
-
-    .cardDescription {
-      color: #9797a1;
-      padding: 20px 0;
     }
   }
 }

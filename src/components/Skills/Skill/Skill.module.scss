@@ -1,10 +1,15 @@
+@import "../../../common/styles/sass/variables.module";
+@import "../../../common/styles/sass/mixins.module";
+
 .card {
   width: 450px;
   padding: 30px 50px;
   border-radius: 10px;
-  background-color: #2d2e31;
+  background-color: $primaryBgColor;
   filter: drop-shadow(10px 0 20px #000);
-  @media screen and (max-width: 1847px){
+  @include flex(space-between, center, unset);
+  transition: ease-out 0.3s;
+  @media screen and (max-width: 1847px) {
     width: 410px;
     @media (max-width: 1697px) {
       width: 380px;
@@ -14,7 +19,7 @@
       padding: 30px 35px;
       filter: drop-shadow(10px 0 15px #000);
     }
-    @media  (max-width: 1394px){
+    @media (max-width: 1394px) {
       width: 300px;
       padding: 20px 25px;
     }
@@ -31,46 +36,35 @@
     filter: drop-shadow(0 0 2px #000);
   }
 
-  .cardTop {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    .cardTitle {
-      font-size: 30px;
-      position: relative;
-      @media screen and (max-width: 1697px){
-        font-size: 25px;
-        @media  (max-width: 1394px){
-          font-size: 20px;
-        }
-        @media  (max-width: 1024px){
-          font-size: 18px;
-        }
+  .cardTitle {
+    font-size: 30px;
+    position: relative;
+    @media screen and (max-width: 1697px) {
+      font-size: 25px;
+      @media (max-width: 1394px) {
+        font-size: 20px;
       }
-
-      &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 2px;
-        bottom: -3px;
-        left: 0;
-        background-color: #ee6192;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-        transform: scaleX(0);
-      }
-
-      &:hover:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
+      @media (max-width: 1024px) {
+        font-size: 18px;
       }
     }
-  }
 
-  .cardDescription {
-    color: #9797a1;
-    padding: 20px 0;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      bottom: -3px;
+      left: 0;
+      background-color: $accentColor;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+      transform: scaleX(0);
+    }
+
+    &:hover:after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
   }
 }

@@ -12,19 +12,14 @@ select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
   border: 0;
-  -webkit-text-fill-color: #fff;
+  -webkit-text-fill-color: $primaryTextColor;
   -webkit-box-shadow: 0 0 0 1000px transparent inset;
   transition: background-color 5000s ease-in-out 0s;
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(0, 174, 255, 0.04) 50%, rgba(255, 255, 255, 0) 51%, rgba(0, 174, 255, 0.03) 100%);
 }
 
-
 .formContainer {
-  //min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(space-between, center, column);
   @media screen and (max-width: 999px) {
     width: 80%;
     @media (max-width: 768px) {
@@ -53,10 +48,7 @@ select:-webkit-autofill:focus {
   }
 
   .contactsForm {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flex(center, center, column);
     height: 360px;
     width: 540px;
     @media screen and (max-width: 1280px) {
@@ -70,8 +62,8 @@ select:-webkit-autofill:focus {
     }
 
     .error {
-      font-size: 16px;
       align-self: flex-start;
+      @include text(16px, #d21404, unset, 500);
       height: 25px;
       margin: 8px 0 0 10px;
       @media screen and (max-width: 1206px) {
@@ -89,7 +81,7 @@ select:-webkit-autofill:focus {
       padding: 10px 25px 10px 12px;
       min-width: 100%;
       outline: none;
-      color: #fff;
+      color: $primaryTextColor;
       background-color: transparent;
       margin-top: 10px;
       @media screen and (max-width: 1206px) {
@@ -106,7 +98,7 @@ select:-webkit-autofill:focus {
       padding: 10px 25px 10px 12px;
       min-width: 100%;
       outline: none;
-      color: #fff;
+      color: $primaryTextColor;
       background-color: transparent;
       resize: none;
       font-family: 'Montserrat', sans-serif;
@@ -119,18 +111,17 @@ select:-webkit-autofill:focus {
 
   input:focus,
   textarea:focus {
-    border: 2px solid #9797a1;
+    border: 2px solid $secondaryTextColor;
   }
 
   .sendBtn {
+    @include text(25px, $accentColor);
     letter-spacing: 1px;
-    font-size: 25px;
-    color: #ee6192;
     text-transform: uppercase;
     background: none;
     outline: none;
     border: none;
-    border-bottom: 2px solid #ee6192;
+    border-bottom: 2px solid $accentColor;
     cursor: pointer;
     margin-top: 10px;
     transition: ease-out 0.3s;
@@ -142,8 +133,8 @@ select:-webkit-autofill:focus {
     }
 
     &:hover {
-      color: #fff;
-      border-bottom: 2px solid #fff;
+      color: $primaryTextColor;
+      border-bottom: 2px solid $primaryTextColor;
     }
   }
 }

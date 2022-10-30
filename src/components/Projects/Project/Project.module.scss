@@ -1,9 +1,10 @@
+@import "../../../common/styles/sass/variables.module";
+@import "../../../common/styles/sass/mixins.module";
+
 .project {
   background-color: #25262a;
   width: 400px;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  @include flex(flex-start, unset, column);
   filter: drop-shadow(10px 0 20px #000);
   border-radius: 10px;
   @media screen and (max-width: 1600px) {
@@ -16,17 +17,11 @@
     }
   }
 
-
   .imageBlock {
     width: 400px;
     height: 400px;
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include backgroundImg();
+    @include flex(center, center, column);
     border-radius: 10px 10px 0 0;
     position: relative;
     @media screen and (max-width: 1600px) {
@@ -53,12 +48,10 @@
 
     a {
       display: none;
-      font-size: 20px;
+      @include text(20px, $primaryTextColor, unset, 600);
       margin: 15px 0;
       text-decoration: none;
-      color: #fff;
-      font-weight: 600;
-      border-bottom: 2px solid #fff;
+      border-bottom: 2px solid $primaryTextColor;
       z-index: 1;
       transition: ease-out 0.3s;
       @media screen and (max-width: 1024px) {
@@ -69,8 +62,8 @@
       }
 
       &:hover {
-        color: #ee6192;
-        border-bottom: 2px solid #ee6192;
+        color: $accentColor;
+        border-bottom: 2px solid $accentColor;
       }
     }
   }
@@ -91,20 +84,16 @@
     padding: 25px;
 
     .projectTitle {
-      font-size: 18px;
-      color: #fff;
-      line-height: 1.2;
-      margin: 0 0 10px;
+      @include text(18px, $primaryTextColor, 1.2, 600);
       letter-spacing: 1px;
+      margin: 0 0 10px;
     }
 
     .description {
-      color: #9797a1;
-      line-height: 1.2;
+      @include text(16px, $secondaryTextColor, 1.2);
     }
   }
 }
-
 
 @keyframes shake {
   0% {

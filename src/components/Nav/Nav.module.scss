@@ -1,3 +1,6 @@
+@import "../../common/styles/sass/variables.module";
+@import "../../common/styles/sass/mixins.module";
+
 .nav {
   background-color: rgba(0, 0, 0, 0.3);
   width: max-content;
@@ -7,8 +10,7 @@
   left: 50%;
   transform: translateX(-50%);
   bottom: 2rem;
-  display: flex;
-  flex-direction: row;
+  @include flex(unset, unset, row);
   gap: 0.8rem;
   border-radius: 3rem;
   backdrop-filter: blur(15px);
@@ -18,7 +20,7 @@
     padding: 0.8rem;
     border-radius: 50%;
     display: flex;
-    color: #fff;
+    color: $primaryTextColor;
     font-size: 1.1rem;
     transition: ease-out 0.3s;
 
@@ -29,6 +31,6 @@
 
   .active {
     background-color: rgba(0, 0, 0, 0.3);
-    color: #ee6192;
+    color: $accentColor;
   }
 }
