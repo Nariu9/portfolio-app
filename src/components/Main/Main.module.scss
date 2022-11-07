@@ -4,12 +4,12 @@
 .main {
   background-color: $primaryBgColor;
   color: $primaryTextColor;
-  overflow: hidden;
-  height: 100vh;
+  min-height: 100vh;
+  //overflow: hidden;
   @include flex(space-between, unset, column);
-  @media screen and (max-width: 1312px) {
+  /*@media screen and (max-width: 1312px) {
     height: unset;
-  }
+  }*/
 
   .mainTitle {
     text-align: center;
