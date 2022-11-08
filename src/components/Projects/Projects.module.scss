@@ -4,17 +4,19 @@
 .projects {
   color: $primaryTextColor;
   background-color: $primaryBgColor;
-  @media screen and (max-width: 1312px) {
-    height: unset;
-  }
 
   .container {
     @include container();
     padding: 60px 0;
     min-height: 100vh;
     @include flex(space-between, unset, column);
-    @media screen and (max-width: 1366px) {
-      padding: 30px 0;
+    @media screen {
+      @media (max-width: 1366px) {
+        padding: 30px 0;
+      }
+      @media (max-width: 1312px) {
+        min-height: fit-content;
+      }
     }
 
     .subtitle {

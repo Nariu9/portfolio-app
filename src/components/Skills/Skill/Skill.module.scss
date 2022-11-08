@@ -9,8 +9,10 @@
   filter: drop-shadow(10px 0 20px #000);
   @include flex(space-between, center, unset);
   transition: ease-out 0.3s;
-  @media screen and (max-width: 1847px) {
-    width: 410px;
+  @media screen {
+    @media (max-width: 1847px) {
+      width: 410px;
+    }
     @media (max-width: 1697px) {
       width: 380px;
     }
@@ -39,8 +41,10 @@
   .cardTitle {
     font-size: 30px;
     position: relative;
-    @media screen and (max-width: 1697px) {
-      font-size: 25px;
+    @media screen {
+      @media (max-width: 1697px) {
+        font-size: 25px;
+      }
       @media (max-width: 1394px) {
         font-size: 20px;
       }

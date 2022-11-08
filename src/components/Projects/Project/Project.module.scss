@@ -7,8 +7,10 @@
   @include flex(flex-start, unset, column);
   filter: drop-shadow(10px 0 20px #000);
   border-radius: 10px;
-  @media screen and (max-width: 1600px) {
-    width: 350px;
+  @media screen {
+    @media (max-width: 1600px) {
+      width: 350px;
+    }
     @media (max-width: 1366px) {
       filter: drop-shadow(10px 0 10px #000);
     }
@@ -24,9 +26,11 @@
     @include flex(center, center, column);
     border-radius: 10px 10px 0 0;
     position: relative;
-    @media screen and (max-width: 1600px) {
-      width: 350px;
-      height: 350px;
+    @media screen {
+      @media (max-width: 1600px) {
+        width: 350px;
+        height: 350px;
+      }
       @media (max-width: 1024px) {
         width: 310px;
         height: 310px;
@@ -54,8 +58,10 @@
       border-bottom: 2px solid $primaryTextColor;
       z-index: 1;
       transition: ease-out 0.3s;
-      @media screen and (max-width: 1024px) {
-        display: inline-block;
+      @media screen {
+        @media (max-width: 1024px) {
+          display: inline-block;
+        }
         @media (max-width: 375px) {
           font-size: 18px;
         }

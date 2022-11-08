@@ -5,18 +5,19 @@
   background-color: $primaryBgColor;
   color: $primaryTextColor;
   min-height: 100vh;
-  //overflow: hidden;
   @include flex(space-between, unset, column);
-  /*@media screen and (max-width: 1312px) {
-    height: unset;
-  }*/
+  @media screen and (max-width: 1312px) {
+    min-height: fit-content;
+  }
 
   .mainTitle {
     text-align: center;
     margin: 50px 0;
     font-size: 50px;
-    @media screen and (max-width: 1600px) {
-      margin-top: 20px;
+    @media screen {
+      @media (max-width: 1600px) {
+        margin-top: 20px;
+      }
       @media (max-width: 1487px) {
         font-size: 45px;
       }
@@ -38,8 +39,10 @@
   .container {
     @include container();
     @include flex(space-between, flex-end, unset);
-    @media screen and (max-width: 1147px) {
-      width: 90%;
+    @media screen {
+      @media (max-width: 1147px) {
+        width: 90%;
+      }
       @media (max-width: 1000px) {
         flex-direction: column;
         align-items: center;
@@ -47,13 +50,14 @@
       }
     }
 
-
     .left {
       width: 65%;
       @include flex(unset, flex-start, column);
       margin-bottom: 250px;
-      @media screen and (max-width: 1763px) {
-        width: 75%;
+      @media screen {
+        @media (max-width: 1763px) {
+          width: 75%;
+        }
         @media (max-width: 1721px) {
           width: 80%;
         }
@@ -91,8 +95,10 @@
       .title {
         @include text(40px, inherit, 1.2);
         padding: 30px 0;
-        @media screen and (max-width: 1589px) {
-          font-size: 35px;
+        @media screen {
+          @media (max-width: 1589px) {
+            font-size: 35px;
+          }
           @media (max-width: 1487px) {
             font-size: 32px;
           }
@@ -111,8 +117,10 @@
 
       .info {
         @include text(20px, $secondaryTextColor, 1.2);
-        @media screen and (max-width: 1232px) {
-          font-size: 18px;
+        @media screen {
+          @media (max-width: 1232px) {
+            font-size: 18px;
+          }
           @media (max-width: 540px) {
             font-size: 16px;
           }
@@ -123,13 +131,14 @@
         margin-top: 30px;
         @include flex(space-between, unset, unset);
         width: 100%;
-        @media screen and (max-width: 1000px) {
-          justify-content: space-around;
+        @media screen {
+          @media (max-width: 1000px) {
+            justify-content: space-around;
+          }
           @media (max-width: 540px) {
             margin-top: 20px;
           }
         }
-
 
         a {
           text-decoration: none;
@@ -141,8 +150,10 @@
           border: none;
           border-bottom: 2px solid $accentColor;
           transition: ease-out 0.3s;
-          @media screen and (max-width: 1487px) {
-            font-size: 23px;
+          @media screen {
+            @media (max-width: 1487px) {
+              font-size: 23px;
+            }
             @media (max-width: 1232px) {
               font-size: 20px;
             }
@@ -169,9 +180,11 @@
         z-index: 3;
         background-image: url("../../assets/images/hero.png");
         @include backgroundImg();
-        @media screen and (max-width: 1440px) {
-          width: 600px;
-          height: 718px;
+        @media screen {
+          @media (max-width: 1440px) {
+            width: 600px;
+            height: 718px;
+          }
           @media (max-width: 1428px) {
             align-self: flex-end;
             width: 545px;
@@ -205,9 +218,11 @@
         height: 600px;
         width: 600px;
         z-index: 0;
-        @media screen and (max-width: 1440px) {
-          height: 550px;
-          width: 550px;
+        @media screen {
+          @media (max-width: 1440px) {
+            height: 550px;
+            width: 550px;
+          }
           @media (max-width: 1428px) {
             height: 480px;
             width: 480px;
@@ -246,9 +261,11 @@
         bottom: 375px;
         left: 45px;
         z-index: 4;
-        @media screen and (max-width: 1440px) {
-          bottom: 347px;
-          left: 43px;
+        @media screen {
+          @media (max-width: 1440px) {
+            bottom: 347px;
+            left: 43px;
+          }
           @media (max-width: 1428px) {
             height: 125px;
             width: 125px;
@@ -271,8 +288,10 @@
         > img {
           width: 75px;
           animation: spin 5s linear infinite;
-          @media screen and (max-width: 768px) {
-            width: 55px;
+          @media screen {
+            @media (max-width: 768px) {
+              width: 55px;
+            }
             @media (max-width: 540px) {
               width: 45px;
             }
@@ -287,9 +306,11 @@
         bottom: 115px;
         left: 485px;
         z-index: 4;
-        @media screen and (max-width: 1440px) {
-          bottom: 76px;
-          left: 444px;
+        @media screen {
+          @media (max-width: 1440px) {
+            bottom: 76px;
+            left: 444px;
+          }
           @media (max-width: 1428px) {
             width: 120px;
             height: 120px;
@@ -318,8 +339,10 @@
 
         > img {
           width: 65px;
-          @media screen and (max-width: 768px) {
-            width: 40px;
+          @media screen {
+            @media (max-width: 768px) {
+              width: 40px;
+            }
             @media (max-width: 540px) {
               width: 35px;
             }
@@ -334,9 +357,11 @@
         top: 260px;
         right: 25px;
         z-index: 2;
-        @media (max-width: 1440px) {
-          top: 192px;
-          right: 42px;
+        @media screen {
+          @media (max-width: 1440px) {
+            top: 192px;
+            right: 42px;
+          }
           @media (max-width: 1428px) {
             width: 105px;
             height: 105px;

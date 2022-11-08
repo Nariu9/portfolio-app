@@ -11,8 +11,10 @@
     font-size: 20px;
     letter-spacing: 1px;
     @include flex(space-between, center, unset);
-    @media screen and (max-width: 999px) {
-      font-size: 16px;
+    @media screen {
+      @media (max-width: 999px) {
+        font-size: 16px;
+      }
       @media (max-width: 540px) {
         justify-content: space-around;
         flex-direction: column;

@@ -4,24 +4,28 @@
 .contacts {
   background: #25262a;
   color: $primaryTextColor;
-  @media screen and (max-width: 1312px) {
-    height: unset;
-  }
 
   .container {
     @include container();
     padding: 60px 0;
     min-height: calc(100vh - 100px);
     @include flex(space-between, unset, column);
-    @media screen and (max-width: 1366px) {
-      padding: 30px 0;
+    @media screen {
+      @media (max-width: 1366px) {
+        padding: 30px 0;
+      }
+      @media (max-width: 1312px) {
+        min-height: fit-content;
+      }
     }
 
     .wrapper {
       @include flex(space-around, unset, unset);
       margin-bottom: 100px;
-      @media screen and (max-width: 1536px) {
-        margin-bottom: 75px;
+      @media screen {
+        @media (max-width: 1536px) {
+          margin-bottom: 75px;
+        }
         @media (max-width: 1366px) {
           margin-bottom: 40px;
         }
@@ -47,8 +51,10 @@
         .subtitle {
           font-size: 32px;
           letter-spacing: 1px;
-          @media screen and (max-width: 1440px) {
-            font-size: 30px;
+          @media screen {
+            @media (max-width: 1440px) {
+              font-size: 30px;
+            }
             @media (max-width: 1366px) {
               font-size: 28px;
             }
@@ -75,8 +81,10 @@
           width: 100%;
           @include flex(flex-start, unset, unset);
           margin-bottom: 145px;
-          @media screen and (max-width: 1206px) {
-            margin-bottom: 165px;
+          @media screen {
+            @media (max-width: 1206px) {
+              margin-bottom: 165px;
+            }
             @media (max-width: 999px) {
               justify-content: center;
               margin-top: 30px;
@@ -95,8 +103,10 @@
             @media screen and (min-width: 1010px) and (max-width: 1206px) {
               font-size: 24px;
             }
-            @media screen and (max-width: 999px) {
-              margin: 0 20px;
+            @media screen {
+              @media (max-width: 999px) {
+                margin: 0 20px;
+              }
               @media (max-width: 420px) {
                 margin: 0 10px;
               }
